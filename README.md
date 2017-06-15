@@ -4,7 +4,13 @@
 
 Material Icons for Vaadin add-on brings Google's Material Icons to your Vaadin applications.
 
-Online demo: http://app.siika.fi/MaterialIcons
+Online demo: http://app.siika.fi/MaterialIconsDemo
+
+## Release Log
+
+### 0.3.0.1 (2017-06-15)
+* Initial release
+* Material Design Icons by Google version 3.0.1
 
 ## Usage
 
@@ -35,7 +41,7 @@ Button button = new Button(MaterialIcons.SENTIMENT_SATISFIED);
 
 ### How to find correct icon to use
 Demo application of this add-on can be used to find suitable icon, and get matching enumeration for
-Java code, and CSS sniplet for your theming usage. http://app.siika.fi/MaterialIcons
+Java code, and CSS sniplet for your theming usage. http://app.siika.fi/MaterialIconsDemo
 
 Or you can browse icons at google's page: https://material.io/icons/
 
@@ -51,8 +57,9 @@ When new icons have been added to material icons, here is how to get this projec
 * Download new codepoints file from: https://github.com/google/material-design-icons/blob/master/iconfont/codepoints
 * Replace ```materialicons-addon/src/test/resources/codepoints``` file with new codepoints file
 * Run materialicons-addon test cases. Test(s) should fail and generate code sniplet that can be used to replace the old outdated
-in MaterialIcons class.
+in ```MaterialIcons``` class.
 * Rerun tests, those should pass now
+* Increase add-on version, package/install it and start using new version
 
 Now you have version of addon with updated set of icons.
 
@@ -63,9 +70,3 @@ https://www.apache.org/licenses/LICENSE-2.0
 
 Material Design Icons and codepoints file are from Google:
 https://github.com/google/material-design-icons/
-
-## Release Log
-
-### 0.3.0.1 (TBD)
-* Initial release
-* Material Design Icons 3.0.1 used
