@@ -1,6 +1,5 @@
 package org.vaadin.alump.materialicons;
 
-import javafx.scene.control.PasswordField;
 import org.junit.Assert;
 import org.junit.ComparisonFailure;
 import org.junit.Test;
