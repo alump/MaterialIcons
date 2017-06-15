@@ -1,0 +1,7 @@
+*.iml
+.idea
+materialicons-addon/target
+materialicons-demo/target
+addons.scss
+*.css
+*.scss.cache

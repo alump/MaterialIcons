@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'MaterialIcons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+  url(../../../VAADIN/addons/materialicons/MaterialIcons-Regular.woff2) format('woff2'),
+  url(../../../VAADIN/addons/materialicons/MaterialIcons-Regular.woff) format('woff'),
+  url(../../../VAADIN/addons/materialicons/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+@import "../valo/valo.scss";
+@import "addons.scss";
+
+// Prefix all selectors in your theme with .demo
+.demo {
+
+  // Include valo theme styles in your theme
+  @include valo;
+  @include addons;
+
+  .icons-layout {
+    padding: 0.3em 0.5em;
+  }
+
+  .icon-button {
+    width: 58px;
+    height: 37px;
+
+    .v-icon {
+      font-size: 24px;
+    }
+  }
+
+  .look-label {
+    font-size: 48px;
+  }
+
+  .v-label.h1 {
+    .v-icon {
+      color: rgba(0,0,0,0.3);
+    }
+
+    &::after {
+      display: inline;
+      font-family: "MaterialIcons";
+      content: "\e420";
+      padding-left: 0.5em;
+      color: rgba(0,0,0,0.3);
+    }
+  }
+}

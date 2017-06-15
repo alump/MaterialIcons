@@ -1,0 +1,17 @@
+@mixin materialicons {
+  .MaterialIcons {
+    font-family: "MaterialIcons";
+
+    font-weight: normal;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+  }
+}
