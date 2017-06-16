@@ -8,6 +8,8 @@ Online demo: http://app.siika.fi/MaterialIconsDemo
 
 ## Release Log
 
+### 0.3.0.1.1 (TBD)
+
 ### 0.3.0.1 (2017-06-15)
 * Initial release
 * Material Design Icons by Google version 3.0.1

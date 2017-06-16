@@ -15,14 +15,14 @@ import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.themes.ValoTheme;
 import org.vaadin.alump.materialicons.MaterialIcons;
 
-import java.util.Random;
 
 @Theme("demo")
 @Title("Material Icons Demo")
 @SuppressWarnings("serial")
 public class DemoUI extends UI {
 
-    private Random random = new Random(0xDEADBEEF);
+    private final static int WINDOW_WIDTH_PX = 500;
+    private final static int WINDOW_HEIGHT_PX = 350;
 
     @WebServlet(value = "/*", asyncSupported = true)
     @VaadinServletConfiguration(productionMode = false, ui = DemoUI.class)
@@ -81,38 +81,41 @@ public class DemoUI extends UI {
     private void onIconButtonClicked(Button.ClickEvent event) {
         MaterialIcons icon = (MaterialIcons)event.getButton().getData();
         Window window = new Window("Icon details");
-        window.setWidth(400, Unit.PIXELS);
-        window.setHeight(400, Unit.PIXELS);
+        window.addStyleName("icon-details");
+        window.setWidth(WINDOW_WIDTH_PX, Unit.PIXELS);
+        window.setHeight(WINDOW_HEIGHT_PX, Unit.PIXELS);
         VerticalLayout layout = new VerticalLayout();
         window.setContent(layout);
         Label look = new Label(icon.getHtml(), ContentMode.HTML);
         look.setCaption("Visual:");
         look.addStyleName("look-label");
         Label name = new Label("MaterialIcons." + icon.name());
+        name.setWidth(100, Unit.PERCENTAGE);
         name.setCaption("Java:");
         name.setContentMode(ContentMode.PREFORMATTED);
         Label css = new Label(
                 "font-family: \"MaterialIcons\";\ncontent: \"\\"
                         + Integer.toString(icon.getCodepoint(), 16) + "\";");
+        css.setWidth(100, Unit.PERCENTAGE);
         css.setContentMode(ContentMode.PREFORMATTED);
         css.setCaption("CSS:");
         layout.addComponents(look, name, css);
         getUI().addWindow(window);
 
-        int x = event.getClientX() - 200;
+        int x = event.getClientX() - (WINDOW_WIDTH_PX / 2);
         if(x < 0) {
             x = 0;
-        } else if(x + 400 > Page.getCurrent().getBrowserWindowWidth()) {
-            x = Page.getCurrent().getBrowserWindowWidth() - 400;
+        } else if(x + WINDOW_WIDTH_PX > Page.getCurrent().getBrowserWindowWidth()) {
+            x = Page.getCurrent().getBrowserWindowWidth() - WINDOW_WIDTH_PX;
         }
 
         window.setPositionX(x);
 
-        int y = event.getClientY() - 200;
+        int y = event.getClientY() - (WINDOW_HEIGHT_PX / 2);
         if(y < 0) {
             y = 0;
-        } else if(y + 400 > Page.getCurrent().getBrowserWindowHeight()) {
-            y = Page.getCurrent().getBrowserWindowHeight() - 400;
+        } else if(y + WINDOW_HEIGHT_PX > Page.getCurrent().getBrowserWindowHeight()) {
+            y = Page.getCurrent().getBrowserWindowHeight() - WINDOW_HEIGHT_PX;
         }
 
         window.setPositionY(y);

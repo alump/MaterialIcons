@@ -49,4 +49,16 @@
       color: rgba(0,0,0,0.3);
     }
   }
+
+  .v-window.icon-details {
+    .v-label {
+      pre {
+        font-weight: 400;
+        background-color: rgba(0,0,0,0.03);
+        margin: 0;
+        padding: 0.2em 0.5em;
+        cursor: text;
+      }
+    }
+  }
 }
