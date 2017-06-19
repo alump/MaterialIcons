@@ -15,3 +15,14 @@
     font-feature-settings: 'liga';
   }
 }
+
+@font-face {
+  font-family: 'MaterialIcons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+  url(MaterialIcons-Regular.woff2) format('woff2'),
+  url(MaterialIcons-Regular.woff) format('woff'),
+  url(MaterialIcons-Regular.ttf) format('truetype');
+}

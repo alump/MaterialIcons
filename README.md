@@ -8,7 +8,11 @@ Online demo: http://app.siika.fi/MaterialIconsDemo
 
 ## Release Log
 
-### 0.3.0.1.1 (TBD)
+### 3.0.1 (2017-06-19)
+* Move font-face definition outside add-on mixin. This should remove requirement to manually add it to
+application theme.
+* Update version number to follow the version number of Material Icons by Google
+* Mark as STABLE
 
 ### 0.3.0.1 (2017-06-15)
 * Initial release
@@ -19,19 +23,6 @@ Online demo: http://app.siika.fi/MaterialIconsDemo
 ### Project setup
 Make sure your project has theme updating enabled, and addons.scss is included to your theme.
 
-Add following lines to beginning of your theme file:
-```css
-@font-face {
-  font-family: 'MaterialIcons';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Material Icons'),
-  local('MaterialIcons-Regular'),
-  url(../../../VAADIN/addons/materialicons/MaterialIcons-Regular.woff2) format('woff2'),
-  url(../../../VAADIN/addons/materialicons/MaterialIcons-Regular.woff) format('woff'),
-  url(../../../VAADIN/addons/materialicons/MaterialIcons-Regular.ttf) format('truetype');
-}
-```
 This will make sure font gets defined correctly. All other CSS rules will come automatically from
 included addons SCSS rules.
 
@@ -46,6 +37,27 @@ Demo application of this add-on can be used to find suitable icon, and get match
 Java code, and CSS sniplet for your theming usage. http://app.siika.fi/MaterialIconsDemo
 
 Or you can browse icons at google's page: https://material.io/icons/
+
+## Font Missing
+First you need to have own custom SCSS based theme on your application to get add-on's CSS rules
+compiled in. Also your theme should import and include addons. Also add-ons should upgraded
+automatically or by hand to import and include materialicons.
+
+Font-face definition should get included to application as long as addon's scss file gets compiled
+to the theme correctly. How ever if this does not work, try adding this to start of your theme's scss.
+
+```css
+@font-face {
+  font-family: 'MaterialIcons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+  url(../../../VAADIN/addons/materialicons/MaterialIcons-Regular.woff2) format('woff2'),
+  url(../../../VAADIN/addons/materialicons/MaterialIcons-Regular.woff) format('woff'),
+  url(../../../VAADIN/addons/materialicons/MaterialIcons-Regular.ttf) format('truetype');
+}
+```
 
 
 ##  Maintenance

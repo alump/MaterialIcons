@@ -1,3 +1,20 @@
+/**
+ * MaterialIcons.java (MaterialIcons)
+ *
+ * Copyright 2017 Vaadin Ltd, Sami Viitanen <sami.viitanen@vaadin.org>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package org.vaadin.alump.materialicons.demo;
 
 import com.vaadin.server.ExternalResource;
@@ -14,7 +31,6 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.themes.ValoTheme;
 import org.vaadin.alump.materialicons.MaterialIcons;
-
 
 @Theme("demo")
 @Title("Material Icons Demo")
@@ -42,7 +58,8 @@ public class DemoUI extends UI {
         header.addStyleName(ValoTheme.LABEL_H1);
         header.setContentMode(ContentMode.HTML);
 
-        Label description = new Label("This add-on brings Material Design Icons by Google to your Vaadin application");
+        Label description = new Label(
+                "This add-on brings Material Design Icons by Google to your Vaadin application");
 
         Panel panel = new Panel(createButtons());
         panel.addStyleName(ValoTheme.PANEL_BORDERLESS);
@@ -51,7 +68,8 @@ public class DemoUI extends UI {
         HorizontalLayout links = new HorizontalLayout();
         links.setWidth(100, Unit.PERCENTAGE);
 
-        Link link = new Link("Browse Icons (material.io/icons)", new ExternalResource("https://material.io/icons/"));
+        Link link = new Link("Browse Icons (material.io/icons)",
+                new ExternalResource("https://material.io/icons/"));
         link.setIcon(MaterialIcons.LINK);
         Link link2 = new Link("Vaadin add-on project GitHub page (source code, issues, ...)",
                 new ExternalResource("https://github.com/alump/materialicons/"));
