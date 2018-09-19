@@ -1,3 +1,6 @@
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/material-icons)
+[![Stars on Vaadin Directory](https://img.shields.io/vaadin-directory/star/material-icons.svg)](https://vaadin.com/directory/component/material-icons)
+
 # Material Icons for Vaadin add-on
 
 [![Build Status](https://epic.siika.fi/jenkins/job/MaterialIcons%20(Vaadin)/badge/icon)](https://epic.siika.fi/jenkins/job/MaterialIcons%20(Vaadin)/)
